@@ -6,13 +6,13 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int gappx = 2; // useless gaps
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=8:antialias=true:autohint=true" };
+static const char dmenufont[]       = "monospace:size=8:antialias=true:autohint=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray3[]       = "#647287";
+static const char col_gray4[]       = "#526c94"; /* color of a selected workspace */
+static const char col_cyan[]        = "#7FC1E9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
