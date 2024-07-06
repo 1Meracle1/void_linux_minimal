@@ -1,0 +1,2 @@
+To list all explicitly installed packages:
+`xbps-query -m`
