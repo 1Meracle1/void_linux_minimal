@@ -103,7 +103,9 @@ install_x11() {
     xtools \
     libX11-devel \
     libXft-devel \
-    libXinerama-devel 
+    libXinerama-devel \
+    xorg-server-xephyr \
+    xeyes
 }
 
 install_dwm() {
@@ -117,6 +119,15 @@ install_dwm() {
 xrandr -s 1920x1080
 ~/.config/sbar/sbar &
 exec ~/.config/dwm/dwm
+  EOF
+}
+
+install_i3() {
+  xbps-install -S i3lock i3blocks picom i3 i3status
+
+  echo > ~/.xinitrc << EOF
+xrandr -s 1920x1080
+exec i3
   EOF
 }
 
@@ -185,6 +196,7 @@ install_fish
 
 install_x11
 install_dwm
+install_i3
 install_wayland
 install_river
 install_hyprland
