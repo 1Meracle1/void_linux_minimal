@@ -13,6 +13,7 @@ install_base_packages() {
   
   xbps-install -S \
     wget \
+    time \
     polkit \
     seatd \
     neofetch \
@@ -21,6 +22,7 @@ install_base_packages() {
     helix \
     dolphin \
     firefox \
+    telegram-desktop \
     dbus 
 
   ln -s /etc/sv/dbus /var/service
@@ -101,6 +103,8 @@ install_x11() {
     xrandr \
     xterm \
     xtools \
+    libxcb \
+    xcb-proto \
     libX11-devel \
     libXft-devel \
     libXinerama-devel \
@@ -181,7 +185,11 @@ install_dev_tools() {
     clang \
     clang-tools-extra \
     llvm \
+    cmake \
+    ninja \
     bash-language-server
+
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
 # main
